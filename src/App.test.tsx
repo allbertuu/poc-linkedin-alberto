@@ -1,9 +1,9 @@
-import React from 'react';
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renderizar componente Button com texto', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const ButtonText = screen.getByText('Primeiro componente')
+  expect(ButtonText).toBeInTheDocument();
 });
